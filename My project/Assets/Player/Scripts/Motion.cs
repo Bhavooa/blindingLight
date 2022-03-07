@@ -6,39 +6,40 @@ public class Motion : MonoBehaviour
 {
 
     public float velocity = 5f;
-    public GameObject player;
-    public Transform target;
-
+    public Rigidbody player;
+    public Camera cam;
+    Vector3 movement;
+    Vector3 mousePosition;
     // Start is called before the first frame update
     void Start()
     {
-        //player = GameObject.FindGameObjectWithTag("Player");
-        target = GetComponent<Transform>();
+
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
+        movement.x = Input.GetAxis("Horizontal");
+        movement.z = Input.GetAxis("Vertical");
+        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
+        Debug.Log(mousePosition);
         movmentCalc();
         rotationCalc();
+        
     }
     //moves the character in acordance to the key inputs
     void movmentCalc(){
 
         //gets key inputs via predefined function
-        float hori = Input.GetAxis("Horizontal");
-        float vert = Input.GetAxis("Vertical");
-        //finds the location
-        Vector3 direction = new Vector3(hori, 0, vert);
         
-        transform.Translate(direction * velocity * Time.deltaTime);
+
+        player.MovePosition(player.position + movement * velocity * Time.deltaTime);
     }
 
     void rotationCalc(){
-        //finds the diference between the angles, and turns
-        Vector3 playerPosition = Input.mousePosition.transform.position - target.transform.position;
-        Vector3 mousePosition = Input.mousePosition;
-        float angle = Vector3.Angle(playerPosition, mousePosition);
-        
+        Vector3 targetDir = mousePosition - player.position;
+        float angle = Mathf.Atan2(targetDir.y, targetDir.x) * Mathf.Rad2Deg - 90f;
+        Quaternion rotation = Quaternion.Euler(0, angle, 0);
+        player.rotation = rotation;
     }
 }
