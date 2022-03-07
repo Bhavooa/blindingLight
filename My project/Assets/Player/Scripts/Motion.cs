@@ -8,6 +8,7 @@ public class Motion : MonoBehaviour
     public float velocity = 5f;
     public GameObject player;
     public Transform target;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,8 +36,8 @@ public class Motion : MonoBehaviour
 
     void rotationCalc(){
         //finds the diference between the angles, and turns
-        // Vector3 relativePos = Input.mousePosition - transform.position;
-        // Quaternion rotation = Quaternion.LookRotation(relativePos);
-        // transform.rotation = rotation;
+        Vector3 relativePos = Input.mousePosition - transform.position;
+        Quaternion rotation = Quaternion.LookRotation(relativePos);
+        transform.rotation = rotation;
     }
 }
