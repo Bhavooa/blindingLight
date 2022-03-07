@@ -1,2 +1,0 @@
-# blindingLight
-First Game
