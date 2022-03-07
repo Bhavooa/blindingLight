@@ -36,6 +36,7 @@ public class Motion : MonoBehaviour
 
     void rotationCalc(){
         //finds the diference between the 
+        //test
         Vector3 relativePos = Input.mousePosition - transform.position;
         Quaternion rotation = Quaternion.LookRotation(relativePos);
         transform.rotation = rotation;
