@@ -832,7 +832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 5
   player: {fileID: 2077971829}
-  target: {fileID: 0}
+  target: {fileID: 2077971834}
   controller: {fileID: 2077971836}
 --- !u!143 &2077971836
 CharacterController:
