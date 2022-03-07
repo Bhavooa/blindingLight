@@ -12,7 +12,7 @@ public class Motion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        //player = GameObject.FindGameObjectWithTag("Player");
         target = GetComponent<Transform>();
     }
 
@@ -36,8 +36,9 @@ public class Motion : MonoBehaviour
 
     void rotationCalc(){
         //finds the diference between the angles, and turns
-        Vector3 relativePos = Input.mousePosition - transform.position;
-        Quaternion rotation = Quaternion.LookRotation(relativePos);
-        transform.rotation = rotation;
+        Vector3 playerPosition = Input.mousePosition.transform.position - target.transform.position;
+        Vector3 mousePosition = Input.mousePosition;
+        float angle = Vector3.Angle(playerPosition, mousePosition);
+        
     }
 }
