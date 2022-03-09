@@ -15,7 +15,7 @@ public class Motion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -34,10 +34,19 @@ public class Motion : MonoBehaviour
     }
 
     void rotationCalc(){
-        // float mouseX = Input.GetAxis("Mouse X") * sensitivity;
-        
-        // play.Rotate(Vector3.up * mouseX);
+        float mouseX = Input.GetAxis("Mouse X") * sensitivity;
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * -1;
+        float mouseMotion = mouseX;
+        play.Rotate(Vector3.up * mouseMotion);
 
-        float difference = mousePosition - player.position;
+
+
+
+        // mousePosition = cam.ScreenToWorldPoint(mousePosition);
+        // Vector3 diff = mousePosition - player.position;
+        // float angle = Mathf.Atan2(diff.y, diff.x);
+        // Quaternion move = Quaternion.Euler(angle, 0, 0);
+        // play.Rotate(diff);
+
     }
 }

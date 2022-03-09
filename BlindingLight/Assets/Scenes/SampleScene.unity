@@ -336,7 +336,7 @@ TerrainCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842661805}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 36b9fad87703f4fb89374e62dd042dc3, type: 2}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 1a1b0bad98de74cefafc92ba4dba4efd, type: 2}
   m_EnableTreeColliders: 1
@@ -382,7 +382,7 @@ Transform:
   m_GameObject: {fileID: 842661805}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -500, y: 0, z: -500}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -496,7 +496,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499775355}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 15, z: 0}
+  m_LocalPosition: {x: 0, y: 30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2077971834}
@@ -773,7 +773,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077971829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.85, y: 0.5, z: 0.05}
+  m_LocalPosition: {x: 0, y: 0.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1499775356}
@@ -795,5 +795,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 3
   sensitivity: 10
+  player: {fileID: 2077971830}
   play: {fileID: 2077971834}
   cam: {fileID: 1499775358}
