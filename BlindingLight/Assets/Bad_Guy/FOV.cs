@@ -14,15 +14,15 @@ public class FOV : MonoBehaviour
     public LayerMask obstructionMask;
     public bool playerInView;
 
-    private start(){
+    private float delay = 0.2f;
+    private void start(){
         playerRef = GameObject.FindGameObjectWithTag("Player");
-        StartCoroutine(FOVroutine());
+        StartCoroutine(FOVroutine(delay));
     }
 
 //waits to update/call FOVChecks 5 times every second instead of calling it every frame
 //optimization
-    private IEnumerator FOVroutine(){
-        float delay = 0.2f;
+    private IEnumerator FOVroutine(float delay){
         WaitForSeconds wait = new WaitForSeconds(delay);
         while(true){
             yield return wait;
@@ -31,20 +31,20 @@ public class FOV : MonoBehaviour
     }
 
     private void FOVcheck(){
-        Collider[] rangeChecks = Physics.overlapShere(transform.position, radius, targetMast);
+        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
         //this means that something has been found
         if(rangeChecks.Length != 0){
             //rangChecks at 0 would be the plaeyr as it is the first value the colider
-            Trasform target = rangeChecks[0].trasform;
+            Transform target = rangeChecks[0].transform;
             //gets the change in the x, y, z values from the enimey location to the player location
-            Vector3 dirToTarget = (target.position - trasform.position);
+            Vector3 dirToTarget = (target.position - transform.position);
         
             //this checks if the player that if found within a radius is also within the correct angle
             if(Vector3.Angle(transform.forward, dirToTarget) < angle/2){
                 
                 float disToTarget = Vector3.Distance(transform.position, target.position);
                 //checks to make sure there isn't an object inbetween the player and the enimey.
-                if(!Physics.Raycast(transform.poistion, dirToTarget, disToTarget, obstructionMask)){
+                if(!Physics.Raycast(transform.position, dirToTarget, disToTarget, obstructionMask)){
                     playerInView = true;
                 } else {
                     playerInView = false;
