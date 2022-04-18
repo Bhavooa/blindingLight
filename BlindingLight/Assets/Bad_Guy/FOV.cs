@@ -24,6 +24,7 @@ public class FOV : MonoBehaviour
 //optimization
     private IEnumerator FOVroutine(float delay){
         WaitForSeconds wait = new WaitForSeconds(delay);
+        Debug.Log("i");
         while(true){
             yield return wait;
             FOVcheck();
@@ -57,5 +58,9 @@ public class FOV : MonoBehaviour
             //resets the player view to false casue the player is not in view anymore.
             playerInView = false;
         }
+    }
+
+    void Update(){
+        //Debug.Log(playerInView);
     }
 }
