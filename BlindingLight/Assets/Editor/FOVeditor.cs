@@ -8,19 +8,19 @@ public class FOVeditor : Editor
 {
     private void onScreenGUI(){
         FOV fov = (FOV)target;
-        Handles.color = color.white;
+        Handles.color = Color.white;
         Handles.DrawWireArc(fov.transform.position, Vector3.up, Vector3.forward, 360, fov.radius);
 
         Vector3 angleLeft = DirectionFromAngle(fov.transform.eulerAngles.y, -fov.angle/2);
         Vector3 angleRight = DirectionFromAngle(fov.transform.eulerAngles.y, fov.angle/2);
 
-        Handles.color = color.yellow;
+        Handles.color = Color.yellow;
 
         Handles.DrawLine(fov.transform.position, fov.transform.position + angleLeft * fov.radius);
         Handles.DrawLine(fov.transform.position, fov.transform.position + angleRight * fov.radius);
 
         if(fov.playerInView){
-            Handles.color = color.green;
+            Handles.color = Color.green;
             Handles.DrawLine(fov.transform.position, fov.playerRef.transform.position);
         }
     }

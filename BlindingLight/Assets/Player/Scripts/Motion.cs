@@ -39,14 +39,5 @@ public class Motion : MonoBehaviour
         float mouseMotion = mouseX;
         play.Rotate(Vector3.up * mouseMotion);
 
-
-
-
-        // mousePosition = cam.ScreenToWorldPoint(mousePosition);
-        // Vector3 diff = mousePosition - player.position;
-        // float angle = Mathf.Atan2(diff.y, diff.x);
-        // Quaternion move = Quaternion.Euler(angle, 0, 0);
-        // play.Rotate(diff);
-
     }
 }
