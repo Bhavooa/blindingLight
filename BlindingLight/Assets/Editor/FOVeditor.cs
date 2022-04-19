@@ -14,10 +14,10 @@ public class FOVeditor : Editor
         Vector3 angleLeft = DirectionFromAngle(fov.transform.eulerAngles.y, -fov.angle/2);
         Vector3 angleRight = DirectionFromAngle(fov.transform.eulerAngles.y, fov.angle/2);
 
-        Hangles.color = color.yellow;
+        Handles.color = color.yellow;
 
-        Hangles.DrawLine(fov.transform.position, fov.transform.position + angleLeft * fov.radius);
-        Hangles.DrawLine(fov.transform.position, fov.transform.position + angleRight * fov.radius);
+        Handles.DrawLine(fov.transform.position, fov.transform.position + angleLeft * fov.radius);
+        Handles.DrawLine(fov.transform.position, fov.transform.position + angleRight * fov.radius);
 
         if(fov.playerInView){
             Handles.color = color.green;
