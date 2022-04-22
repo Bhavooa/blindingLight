@@ -4,12 +4,15 @@ using UnityEngine;
 using UnityEditor;
 
 [CustomEditor(typeof(FOV))]
+[CanEditMultipleObjects]
 public class FOVeditor : Editor
 {
-    private void onScreenGUI(){
+    void OnSceneGUI(){
+        Debug.Log("Hi");
         FOV fov = (FOV)target;
         Handles.color = Color.white;
-        Handles.DrawWireArc(fov.transform.position, Vector3.up, Vector3.forward, 360, fov.radius);
+        Vector3 center = fov.transform.position;
+        Handles.DrawWireArc(center, Vector3.up, Vector3.forward, 360, fov.radius);
 
         Vector3 angleLeft = DirectionFromAngle(fov.transform.eulerAngles.y, -fov.angle/2);
         Vector3 angleRight = DirectionFromAngle(fov.transform.eulerAngles.y, fov.angle/2);

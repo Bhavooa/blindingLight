@@ -15,20 +15,26 @@ public class FOV : MonoBehaviour
     public bool playerInView;
 
     private float delay = 0.2f;
+
     private void start(){
         playerRef = GameObject.FindGameObjectWithTag("Player");
-        StartCoroutine(FOVroutine(delay));
+        //StartCoroutine(FOVroutine());
     }
 
-//waits to update/call FOVChecks 5 times every second instead of calling it every frame
-//optimization
-    private IEnumerator FOVroutine(float delay){
-        WaitForSeconds wait = new WaitForSeconds(delay);
-        while(true){
-            yield return wait;
-            FOVcheck();
-        }
+    //waits to update/call FOVChecks 5 times every second instead of calling it every frame
+    //optimization
+    void Update()
+    {
+        FOVcheck();
     }
+
+    // private IEnumerator FOVroutine(){
+    //     WaitForSeconds wait = new WaitForSeconds(delay);
+    //     while(true){
+    //         yield return wait;
+    //         FOVcheck();
+    //     }
+    // }
 
     private void FOVcheck(){
         Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
