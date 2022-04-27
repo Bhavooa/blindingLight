@@ -49,6 +49,7 @@
   <ItemGroup>
      <Compile Include="Assets\Player\Scripts\Motion.cs" />
      <Compile Include="Assets\Bad_Guy\FOV.cs" />
+     <Compile Include="Assets\Button.cs" />
      <None Include="Assets\Bad_Guy\BodyGuards\ReadMe.txt.txt" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>

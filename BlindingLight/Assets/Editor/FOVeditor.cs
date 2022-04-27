@@ -4,11 +4,10 @@ using UnityEngine;
 using UnityEditor;
 
 [CustomEditor(typeof(FOV))]
-[CanEditMultipleObjects]
+//[CanEditMultipleObjects]
 public class FOVeditor : Editor
 {
     void OnSceneGUI(){
-        Debug.Log("Hi");
         FOV fov = (FOV)target;
         Handles.color = Color.white;
         Vector3 center = fov.transform.position;
@@ -19,7 +18,7 @@ public class FOVeditor : Editor
 
         Handles.color = Color.yellow;
 
-        Handles.DrawLine(fov.transform.position, fov.transform.position + angleLeft * fov.radius);
+        Handles.DrawLine(fov.transform.position, fov.transform.position + angleLeft * fov.radius, 10f);
         Handles.DrawLine(fov.transform.position, fov.transform.position + angleRight * fov.radius);
 
         if(fov.playerInView){

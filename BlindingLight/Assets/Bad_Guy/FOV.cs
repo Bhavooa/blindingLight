@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FOV : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class FOV : MonoBehaviour
     public LayerMask obstructionMask;
     public bool playerInView;
 
-    private float delay = 0.2f;
+    //private float delay = 0.2f;
 
     private void start(){
         playerRef = GameObject.FindGameObjectWithTag("Player");
@@ -26,6 +27,10 @@ public class FOV : MonoBehaviour
     void Update()
     {
         FOVcheck();
+        //do quit condition here!!!!!!!!!!!!!!
+        if(playerInView){
+            SceneManager.LoadScene("DeathMenu");
+        }
     }
 
     // private IEnumerator FOVroutine(){
