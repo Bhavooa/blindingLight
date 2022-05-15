@@ -36,12 +36,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/UI/Timer.cs" />
+     <Compile Include="Assets/Script/Timer.cs" />
+     <Compile Include="Assets/Script/PickUpObject.cs" />
      <Compile Include="Assets/Script/Motion.cs" />
      <Compile Include="Assets/Script/FOV.cs" />
      <Compile Include="Assets/Script/TeleportItem.cs" />
      <Compile Include="Assets/Script/Button.cs" />
-     <Compile Include="Assets/Script/PickUpObject.cs" />
+     <Compile Include="Assets/Script/OrbCount.cs" />
      <None Include="Assets/Bad_Guy/BodyGuards/ReadMe.txt.txt" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>

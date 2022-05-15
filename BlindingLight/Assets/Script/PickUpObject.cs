@@ -6,18 +6,7 @@ public class PickUpObject : MonoBehaviour
 {
 
     public Collider orb;
-    TeleportItem Orb;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public float teleportCount;
 
    //checks to make sure that the orb touches the player
     void OnTriggerEnter(Collider other){
@@ -25,7 +14,20 @@ public class PickUpObject : MonoBehaviour
             //moves orb out of view
             orb.transform.position = new Vector3(-20f, 0.5f, -20f);
             //adds count of teleport items to player
-            Orb.addOrb();
+            addOrb();
         }
+    }
+
+    void addOrb(){
+        teleportCount++;
+    }
+
+    public float getCount(){
+        Debug.Log(teleportCount);
+        return teleportCount;
+    }
+    void Update()
+    {
+       // Debug.Log(teleportCount);
     }
 }
