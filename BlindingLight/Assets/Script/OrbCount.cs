@@ -8,12 +8,12 @@ public class OrbCount : MonoBehaviour
 
     float orbCount;
     Text text;
-    PickUpObject orbs;
+    TeleportItem orbs;
 
     void Start()
     {
         text = GetComponent<Text>();
-        orbs = GameObject.Find("Orb").GetComponent<PickUpObject>();
+        orbs = GameObject.FindObjectOfType(typeof(TeleportItem)) as TeleportItem;
     }
 
     // Update is called once per frame
@@ -21,5 +21,9 @@ public class OrbCount : MonoBehaviour
     {
         orbCount = orbs.getCount();
         text.text = orbCount + "";
+    }
+
+    void setCount(float newCount){
+        orbCount = newCount;
     }
 }

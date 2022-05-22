@@ -6,7 +6,11 @@ public class PickUpObject : MonoBehaviour
 {
 
     public Collider orb;
-    public float teleportCount;
+    TeleportItem counter;
+    void Start()
+    {
+        counter = GameObject.FindObjectOfType(typeof(TeleportItem)) as TeleportItem;
+    }
 
    //checks to make sure that the orb touches the player
     void OnTriggerEnter(Collider other){
@@ -14,20 +18,7 @@ public class PickUpObject : MonoBehaviour
             //moves orb out of view
             orb.transform.position = new Vector3(-20f, 0.5f, -20f);
             //adds count of teleport items to player
-            addOrb();
+            counter.addOrb();
         }
-    }
-
-    void addOrb(){
-        teleportCount++;
-    }
-
-    public float getCount(){
-        Debug.Log(teleportCount);
-        return teleportCount;
-    }
-    void Update()
-    {
-       // Debug.Log(teleportCount);
     }
 }
