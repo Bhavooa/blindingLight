@@ -22,8 +22,4 @@ public class OrbCount : MonoBehaviour
         orbCount = orbs.getCount();
         text.text = orbCount + "";
     }
-
-    void setCount(float newCount){
-        orbCount = newCount;
-    }
 }

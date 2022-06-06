@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/LevelOne.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
     path: Assets/Scenes/DeathMenu.unity
     guid: 8c11d17fad32245c2834e5b73101ba15
   - enabled: 1
-    path: Assets/Scenes/LevelOne.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/GameWon.unity
+    guid: 631e9e37af89a47168012b39cd6acbdb
+  - enabled: 1
+    path: Assets/Scenes/LevelTwo.unity
+    guid: 2e80a1e4a936c4f5c811bc3fa7a2bd4e
   m_configObjects: {}
