@@ -8,7 +8,7 @@ public class Motion : MonoBehaviour
     //the speed at which the player moves
     float velocity = 5f;
     //the rate at which the playe rotates
-    float sensitivity = 5f;
+    public float sensitivity;
     //the player reference, used for motion
     public Transform player;
     //placehoder for the rate of motion
@@ -33,6 +33,7 @@ public class Motion : MonoBehaviour
         orbs = GameObject.FindObjectOfType(typeof(TeleportItem)) as TeleportItem;
         //used to pause timer later
         time = GameObject.FindObjectOfType(typeof(Timer)) as Timer;
+        //is used to decide weather to run teleport method or normal motion method
         isTeleporting = false;
         //used as a reference
         startPosition = player.position;
@@ -44,6 +45,8 @@ public class Motion : MonoBehaviour
         //used to reset player back to where player started
         if(Input.GetKey("r")){
             player.position = startPosition;
+            time.resetTimer();
+            stopTeleport();
         }
         //checks if teleport is called and is possible due to orb count > 0
         if((orbs.getCount() > 0) && Input.GetKeyDown("e")){
@@ -102,9 +105,6 @@ public class Motion : MonoBehaviour
             }
             //causes teleport to stop
             stopTeleport();
-        } else if(Input.GetKey("b")) {
-            stopTeleport();
-            orbs.addOrb();
         }
     }
 

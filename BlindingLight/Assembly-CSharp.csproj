@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets/Script/Timer.cs" />
+     <Compile Include="Assets/Script/ShowBestTime.cs" />
      <Compile Include="Assets/Script/PickUpObject.cs" />
      <Compile Include="Assets/Script/WinnerButton.cs" />
      <Compile Include="Assets/Script/Motion.cs" />
@@ -45,7 +46,10 @@
      <Compile Include="Assets/Script/OrbCount.cs" />
      <Compile Include="Assets/Script/TeleportItem.cs" />
      <Compile Include="Assets/Script/DeathButton.cs" />
-     <Compile Include="Assets/Script/ShowBestTime.cs" />
+     <Compile Include="Assets/Script/mainMenu/ReturnScript.cs" />
+     <Compile Include="Assets/Script/mainMenu/StartButton.cs" />
+     <Compile Include="Assets/Script/mainMenu/QuitButton.cs" />
+     <Compile Include="Assets/Script/mainMenu/TutorialMenu.cs" />
      <None Include="Assets/Bad_Guy/BodyGuards/ReadMe.txt.txt" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>

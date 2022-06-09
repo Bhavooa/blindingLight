@@ -5,17 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class WinnerButton : MonoBehaviour
 {
+    //sets at the first frame
     void Start(){
-        Cursor.visible = true;
-
+        //show mouse
+        Cursor.lockState = CursorLockMode.None;
     }
+
+    //used for OnClick Method
     public void ContinuePressed(){
+        //calls on the next level
         SceneManager.LoadScene("LevelTwo");
-    }
-
-    void Update(){
-        if(Input.GetKey("return")){
-            ContinuePressed();
-        }
     }
 }

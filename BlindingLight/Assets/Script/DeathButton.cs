@@ -5,17 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class DeathButton : MonoBehaviour
 {
+    //sets at the first frame
     void Start(){
-        Cursor.visible = true;
-
+        //show mouse
+        Cursor.lockState = CursorLockMode.None;
     }
+    //called for onClick system, ment to load level one.
     public void ContinuePressed(){
+        //loads level back to what it to try again.
         SceneManager.LoadScene("LevelOne");
-    }
-
-    void Update(){
-        if(Input.GetKey("return")){
-            ContinuePressed();
-        }
     }
 }

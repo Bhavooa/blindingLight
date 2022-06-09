@@ -444,8 +444,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+      - m_Target: {fileID: 1612994575}
+        m_TargetAssemblyTypeName: DeathButton, Assembly-CSharp
         m_MethodName: ContinuePressed
         m_Mode: 1
         m_Arguments:
@@ -455,7 +455,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &924651414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,7 +564,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press enter to try again
+  m_Text: TRY AGAIN
 --- !u!222 &937663346
 CanvasRenderer:
   m_ObjectHideFlags: 0
