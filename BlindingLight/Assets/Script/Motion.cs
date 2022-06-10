@@ -42,6 +42,11 @@ public class Motion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //has a way to quit game
+        if(Input.GetKey("escape")){
+            //quit game function
+            Application.Quit();
+        }
         //used to reset player back to where player started
         if(Input.GetKey("r")){
             player.position = startPosition;

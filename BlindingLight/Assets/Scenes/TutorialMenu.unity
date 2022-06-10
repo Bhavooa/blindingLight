@@ -480,14 +480,14 @@ RectTransform:
   m_GameObject: {fileID: 1491687636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 947171828}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74.788086, y: 132.28625}
+  m_AnchoredPosition: {x: 74.788086, y: 89}
   m_SizeDelta: {x: 666.3232, y: 205.1818}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1491687638
@@ -530,26 +530,28 @@ MonoBehaviour:
     E = enter teleport
     mode
 
+    Esc = Quit Game
+
 
     How Teleport Works:
 
-    -Collect orbs to gain the ability to teleport
+    -Collect orbs to gain
+    the ability to teleport
 
-    -Press
-    E to enter teleport mode: Your character will be frozen in place.
+    -Press E to enter teleport mode: Your character
+    will be frozen in place.
 
-    -Your
-    mouse will apear on screen, don''t be scared, you just need to select where you
-    want to teleport to.
+    -Your mouse will apear on screen, don''t be scared,
+    you just need to select where you want to teleport to.
 
-    -If your ever stuck press R to reset to the start of
-    the map (don''t worry your time also reset)
+    -If your ever stuck
+    press R to reset to the start of the map (don''t worry your time also reset)
 
 
     Goal:
 
-    -Reach the end as
-    fast as humainly possible.'
+    -Reach
+    the end as fast as humainly possible.'
 --- !u!222 &1491687639
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -619,8 +621,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
-    m_PressedColor: {r: 0.30572915, g: 1, b: 0, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.019607844, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -717,7 +719,7 @@ RectTransform:
   m_GameObject: {fileID: 1644581992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1497110338}
   m_Father: {fileID: 947171828}
@@ -725,7 +727,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -221}
+  m_AnchoredPosition: {x: 52, y: -359}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1644581994
@@ -867,7 +869,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 52.507935, y: 410}
+  m_AnchoredPosition: {x: 52.507935, y: 646}
   m_SizeDelta: {x: 241.4032, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1932962882

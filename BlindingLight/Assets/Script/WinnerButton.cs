@@ -14,6 +14,6 @@ public class WinnerButton : MonoBehaviour
     //used for OnClick Method
     public void ContinuePressed(){
         //calls on the next level
-        SceneManager.LoadScene("LevelTwo");
+        SceneManager.LoadScene("LevelOne");
     }
 }
