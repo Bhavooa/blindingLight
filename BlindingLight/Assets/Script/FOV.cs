@@ -96,8 +96,9 @@ public class FOV : MonoBehaviour
         for(int i = 0; i <= angle; i++){
             //used to find where the raycast has hit if it has hit an obstructionMask
             RaycastHit hit;
+            float distance = radius + 1;
             //gets the max edge point of that angle of the cone, gets a Vector3, sends in the angle of rotation + 25 and the radius
-            Vector3 hitPoint = getPoint(i, radius);
+            Vector3 hitPoint = getPoint(i, distance);
             //gets the real world position of the vector point
             Vector3 worldPos = transform.TransformPoint(hitPoint);
             //gets the distance in V3 from the end point to the original position
